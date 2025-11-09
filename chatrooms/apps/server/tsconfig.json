@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    /* ===== Core Compiler Settings ===== */
+    "target": "ES2020",                        // Modern JS output
+    "module": "CommonJS",                      // Use CommonJS to fix ESM import error
+    "rootDir": ".",                            // Root folder for your TypeScript files
+    "outDir": "./dist",                        // Where compiled JS will be emitted
+    "moduleResolution": "node",                // Node-style module resolution
+
+    /* ===== Interop & Compatibility ===== */
+    "esModuleInterop": true,                   // Allow default imports from CommonJS modules
+    "allowSyntheticDefaultImports": true,      // Helps with Express, Prisma, etc.
+    "resolveJsonModule": true,                 // Allows importing .json files
+    "skipLibCheck": true,                      // Skip type checking node_modules
+    "forceConsistentCasingInFileNames": true,  // Enforce consistent imports
+
+    /* ===== Type Safety ===== */
+    "strict": true,                            // Enable all strict type-checking
+    "noImplicitAny": false,                    // Disable if you prefer lenient typing
+
+    /* ===== Optional Features ===== */
+    "incremental": true,                       // Speeds up subsequent builds
+    "isolatedModules": false                   // Required for ts-node-dev compatibility
+  },
+  "include": [
+    "./**/*.ts"                                // Include all TS files
+  ],
+  "exclude": [
+    "node_modules", "dist"                     // Skip build and dependencies
+  ]
+}
